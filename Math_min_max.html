@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+	<script>
+
+	// replicate this function:   Math.min();
+	min(4,3,2,1,2,3,9);
+
+	// replicate this function:   Math.max();
+	max(4,3,2,1,2,3,9);
+
+//---------------- Display text----------------
+
+	document.write(
+		"List of numbers: 4,3,2,1,2,3,9 <br>" +
+		"The min number is: " + min(4,3,2,1,2,3,9) + "<br>" +
+		"The max number is: " + max(4,3,2,1,2,3,9)
+	);
+//---------------- Math.min() ----------------
+
+	function min(){
+		var smallestNum = arguments[0];
+		for(var i = 0; i < arguments.length; i++){
+			if (arguments[i] < smallestNum){
+				smallestNum = arguments[i];
+			}
+		}
+	return smallestNum;
+	}
+
+
+//---------------- Math.max() ----------------
+
+	function max(){
+		var largestNum = arguments[0];
+		for(var i = 0; i < arguments.length; i++){
+			if (arguments[i] > largestNum){
+				largestNum = arguments[i];
+			}
+		}
+	return largestNum;
+	}
+	</script>
+</body>
+</html>
